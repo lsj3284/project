@@ -28,6 +28,7 @@ return(
          <Layout>
               <Header/>
                <Form todos={todos} setTodos={setTodos}/>
+               
                <List todos={todos} setTodos={setTodos}/>  
         </Layout>
  

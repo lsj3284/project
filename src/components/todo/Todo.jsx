@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
 
-function Todo({ todo, onDeleteHanlder, onEditHandler }) {
-  console.log(onDeleteHanlder);
+function Todo({ todo, onDeleteHandler, onEditHandler }) {
+  console.log(onDeleteHandler);
   return (
     <div className="todo-container">
       <div>
@@ -12,7 +12,7 @@ function Todo({ todo, onDeleteHanlder, onEditHandler }) {
       <div className="button-set">
         <button
           className="todo-delete-button button"
-          onClick={() => onDeleteHanlder(todo.id)}
+          onClick={() => onDeleteHandler(todo.id)}
         >
           삭제하기
         </button>

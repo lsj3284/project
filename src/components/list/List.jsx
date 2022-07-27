@@ -3,7 +3,8 @@ import Todo from "../todo/Todo";
 import "./style.css";
 
 function List({ todos, setTodos }) {
-  const onDeleteHanlder = (todoId) => {
+  const onDeleteHandler = (todoId) => {
+    
     const newTodos = todos.filter((todo) => {
       return todo.id !== todoId;
     });
@@ -30,6 +31,7 @@ function List({ todos, setTodos }) {
     <div className="list-container">
       <h2 className="list-title">Working.. 🔥</h2>
       <div className="list-wrapper">
+
         {todos.map((todo) => {
           if (!todo.isDone) {
             return (
@@ -37,7 +39,7 @@ function List({ todos, setTodos }) {
                 todo={todo}
                 key={todo.id}
                 setTodos={setTodos}
-                onDeleteHanlder={onDeleteHanlder}
+                onDeleteHandler={onDeleteHandler}
                 onEditHandler={onEditHandler}
               />
             );
@@ -55,7 +57,7 @@ function List({ todos, setTodos }) {
                 todo={todo}
                 key={todo.id}
                 setTodos={setTodos}
-                onDeleteHanlder={onDeleteHanlder}
+                onDeleteHandler={onDeleteHandler}
                 onEditHandler={onEditHandler}
               />
             );
